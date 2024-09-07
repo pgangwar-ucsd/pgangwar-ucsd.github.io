@@ -457,6 +457,31 @@ a[data-fancybox] img {
  *  Biography
  **************************************************/
 
+.project-section {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.image-container {
+  flex: 3; /* Allocate 3/5ths of the width to the image */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-image {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain; /* Ensures the image fits within the container without cropping */
+}
+
+.col-md-5 {
+  flex: 2; /* Allocate 2/5ths of the width to the text */
+  padding-left: 20px; /* Add some space between the image and text */
+}
+
 #profile {
   text-align: center;
   padding: 30px 10px;
@@ -470,15 +495,6 @@ a[data-fancybox] img {
   margin: 0 auto;
   border-radius: 50%;
   background-size: cover;
-}
-
-#profile .project {
-  background-image: url('../img/WBE_gif.gif');
-  background-size: cover;
-  background-position: center;
-  width: 100%;  /* Occupy full width of the column */
-  height: 100%; /* Occupy full height of the column */
-  min-height: 400px; /* Optional: Set a minimum height for the image */
 }
 
 #profile .portrait-title h2 {
