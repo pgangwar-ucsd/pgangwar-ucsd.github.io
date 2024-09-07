@@ -472,6 +472,15 @@ a[data-fancybox] img {
   background-size: cover;
 }
 
+#profile .project {
+  background-image: url('../img/portrait.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 100%;  /* Occupy full width of the column */
+  height: 100%; /* Occupy full height of the column */
+  min-height: 400px; /* Optional: Set a minimum height for the image */
+}
+
 #profile .portrait-title h2 {
   font-size: 1.75em;
   font-weight: 300;
