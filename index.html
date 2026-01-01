@@ -142,7 +142,7 @@
       </div>
       <div class="col-xs-12 col-md-8" itemprop="description">
         <h1 id="about">About</h1>
-        <p>I am a fifth-year PhD candidate at UC San Diego. My research has focused on developing <strong>full-stack solutions</strong> to overcome <strong>computational bottlenecks</strong> in large-scale data analysis, ranging from designing efficient hardware to building high-performance computing software. I have worked on <strong>hardware/software co-design</strong> techniques to improve the efficiency of <strong>ML accelerators</strong>, enhanced <strong>GPU utilization</strong> through optimized tiling strategies, and explored <strong>processing near-memory</strong> approaches to accelerate a variety of workloads.</p><p>More recently, my work has focused on <strong> computational biology</strong>, where I develop <strong>high-performance computing </strong> solutions for analyzing noisy, large-scale metagenomics data to improve pathogen detection resolution, enabling more detailed downstream analyses in <strong>public health and point-of-care diagnostics</strong>. I am also working with <strong>protein language models</strong> to improve <strong>vaccine strain selection models</strong> and predict <strong>pathogen evolution</strong>.</p>
+        <p>I am a fifth-year PhD candidate at UC San Diego. My research has focused on developing full-stack solutions to <strong> overcome computational bottlenecks</strong> in large-scale data analysis, ranging from designing <strong>efficient hardware</strong> to building <strong>high-performance computing </strong> software. I have worked on hardware/software co-design techniques to improve the efficiency of ML accelerators, enhanced GPU utilization through optimized tiling strategies, and explored processing near-memory approaches to accelerate a variety of workloads.</p><p>More recently, my work has focused on computational biology, where I develop high-performance computing solutions for analyzing noisy, large-scale metagenomics data to improve pathogen detection resolution, enabling more detailed downstream analyses in public health and point-of-care diagnostics. I am also working to improve <strong>vaccine strain selection models</strong>.</p>
         <p><strong><a href="https://pgangwar-ucsd.github.io/files/Pranav_Gangwar_UCSanDiego_Resume.pdf">Link to Resume</a></strong></p>
       </div>
     </div>
@@ -197,10 +197,21 @@
         <img src="../img/WBE_gif.gif" class="project-image">
       </div>
     </div>
+    <div class="row">
+      <div class="col-xs-12 col-md-8">
+        <div class="text-container" itemprop="description">
+          <h3 id="about">metaWEPP: High-Resolution Metagenomic Analysis</h3>
+          <p>While WEPP is designed to detect specific pathogens in wastewater, metaWEPP extends this approach to complex environmental samples—such as soil, water, air, and bodily fluids like cell-free DNA—that contain genetic material from many different organisms. Rather than a single puzzle, these samples resemble thousands of puzzles mixed together.</p>
+          <p>metaWEPP efficiently untangles this complexity by first identifying which organism each genetic fragment belongs to, and then applying WEPP to identify the specific genome variants for each organism. This enables a detailed view of the microbial composition of a sample, supporting applications ranging from clinical diagnostics to environmental and ecological monitoring.</p>
+          <p>
+            <a class="btn btn-primary btn-outline" href="https://github.com/TurakhiaLab/metaWEPP" target="_blank" rel="noopener">Learn More</a>
+          </p>
+        </div>
+        <img src="../img/metaWEPP_Overview.png" class="project-image">
+      </div>
+    </div>
   </div>
 </section>
-
-
 
 
 
@@ -210,11 +221,27 @@
       <div class="col-xs-12 col-md-4 section-heading">
         <h1>Publications</h1>
       </div>
-      <div class="col-xs-12 col-md-8">
+        <div class="col-xs-12 col-md-8">
+        <div class="pub-list-item" style="margin-bottom: 1rem" itemscope itemtype="http://schema.org/CreativeWork">
+          <i class="fa fa-file-text-o pub-icon" aria-hidden="true"></i>
+          <span itemprop="author"> <em><b>Pranav Gangwar</b></em>,  Qiwen Xu, Jaden Seangmany, Pratik Katte, and Yatish Turakhia</span>,
+          "metaWEPP: Phylogenetic Placement Enables Near-Haplotype Resolution of Metagenomic Samples"</a>,
+          under submission RECOMB, </em> 2026.
+        </div>    
+        
+        <div class="col-xs-12 col-md-8">
         <div class="pub-list-item" style="margin-bottom: 1rem" itemscope itemtype="http://schema.org/CreativeWork">
           <i class="fa fa-file-text-o pub-icon" aria-hidden="true"></i>
           <span itemprop="author"> <em><b>Pranav Gangwar</b></em>, Pratik Katte, Manu Bhat, and Yatish Turakhia</span>,
           <a href="https://www.medrxiv.org/content/10.1101/2025.06.09.25329287v1" target="_blank" itemprop="url" rel="noopener">"WEPP: Phylogenetic Placement Achieves Near-Haplotype Resolution in Wastewater-Based Epidemiology"</a>,
+          medRxiv, </em> 2025.
+        </div>    
+      
+        <div class="col-xs-12 col-md-8">
+        <div class="pub-list-item" style="margin-bottom: 1rem" itemscope itemtype="http://schema.org/CreativeWork">
+          <i class="fa fa-file-text-o pub-icon" aria-hidden="true"></i>
+          <span itemprop="author"> Kyle Smith, <em><b>Pranav Gangwar</b></em>, Joel Wertheim, and Yatish Turakhia</span>,
+          <a href="https://www.medrxiv.org/content/10.1101/2025.10.28.25338993v1" target="_blank" itemprop="url" rel="noopener">"Genetic Diversity Drives the Rate and Fitness Jumps of Detectable SARS-CoV-2 Recombination"</a>,
           medRxiv, </em> 2025.
         </div>    
         
