@@ -29,6 +29,7 @@ html {
   font-size: 16px;
   color: rgba(0,0,0,0.8);
   line-height: 1.65;
+  height: -webkit-fill-available;
 }
 @media screen and (min-width: 58em) {
   html {
@@ -341,10 +342,21 @@ a[data-fancybox] img {
   }
 }
 
+@-webkit-keyframes intro {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .home-section {
   background-color: rgb(255, 255, 255);
   padding: 110px 0 110px 0;
+  -webkit-animation: intro 0.3s both;
   animation: intro 0.3s both;
+  -webkit-animation-delay: 0.15s;
   animation-delay: 0.15s;
 }
 
@@ -354,16 +366,27 @@ a[data-fancybox] img {
 
 #about.home-section {
   min-height: calc(100vh - 71px);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: stretch;
+  min-height: calc(100svh - 71px);
   padding-top: 40px;
   padding-bottom: 40px;
 }
 
 #about.home-section .container {
   width: 100%;
+}
+
+#about .row {
+  width: 100%;
+}
+
+#about .row:before,
+#about .row:after {
+  display: table;
+  content: " ";
+}
+
+#about .row:after {
+  clear: both;
 }
 
 #about .col-md-7 {
@@ -395,6 +418,10 @@ a[data-fancybox] img {
 #about #profile .portrait {
   width: 240px;
   height: 240px;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 #about #profile {
@@ -412,6 +439,7 @@ a[data-fancybox] img {
 @media screen and (max-width: 1200px) {
   #about.home-section {
     min-height: calc(100vh - 51px);
+    min-height: calc(100svh - 51px);
   }
 }
 
@@ -533,7 +561,7 @@ a[data-fancybox] img {
 
 .hero-overlay .hero-lead a {
   color: #fff;
-  text-decoration-line: underline;
+  text-decoration: underline;
 }
 
 .hero-overlay .btn-large {
@@ -578,7 +606,8 @@ a[data-fancybox] img {
 .project-image {
   max-width: 100%;
   height: auto;
-  object-fit: contain; /* Ensures the image fits properly without being cropped */
+  -o-object-fit: contain;
+  object-fit: contain;
 }
 
 #profile {
@@ -588,12 +617,15 @@ a[data-fancybox] img {
 }
 
 #profile .portrait {
-  background-image: url('../img/portrait.jpg');
+  background-image: url('/img/portrait.jpg');
   width: 200px;
   height: 200px;
   margin: 0 auto;
   border-radius: 50%;
+  -webkit-background-size: cover;
   background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 #profile .portrait-title h2 {
@@ -611,6 +643,7 @@ a[data-fancybox] img {
 }
 
 #profile ul.network-icon {
+  display: -webkit-inline-flex;
   display: inline-flex;
   flex-direction: row;
   flex-wrap: wrap;
