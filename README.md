@@ -1,2 +1,2 @@
 # pgangwar-ucsd.github.io
-Academic Website
+Personal Website
