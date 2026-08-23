@@ -33,7 +33,7 @@ html {
 }
 @media screen and (min-width: 58em) {
   html {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 
@@ -43,7 +43,7 @@ body {
   line-height: inherit;
   color: inherit;
   background-color: #fff;
-  margin-top: 71px; /* Offset body content by navbar height. */
+  margin-top: 46px; /* Offset body content by navbar height. */
   padding-top: 0;
   counter-reset: captions;
 }
@@ -97,16 +97,16 @@ h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word; /* Ensures very long heading words do not overflow into content. */
 }
 h1 {
-  font-size: 2.25rem;
+  font-size: 1.5rem;
 }
 h2 {
   margin-top: 1rem;
-  font-size: 1.5rem;
+  font-size: 1.125rem;
 }
 h3 {
   font-weight: 700;
   margin-top: 1.5rem;
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 h4, h5, h6 {
   font-weight: 700;
@@ -353,7 +353,7 @@ a[data-fancybox] img {
 
 .home-section {
   background-color: rgb(255, 255, 255);
-  padding: 110px 0 110px 0;
+  padding: 34px 0 56px 0;
   -webkit-animation: intro 0.3s both;
   animation: intro 0.3s both;
   -webkit-animation-delay: 0.15s;
@@ -365,14 +365,8 @@ a[data-fancybox] img {
 }
 
 #about.home-section {
-  min-height: calc(100vh - 71px);
-  min-height: calc(100svh - 71px);
-  padding-top: 40px;
-  padding-bottom: 40px;
-}
-
-#about.home-section .container {
-  width: 100%;
+  padding-top: 12px;
+  padding-bottom: 56px;
 }
 
 #about .row {
@@ -389,35 +383,31 @@ a[data-fancybox] img {
   clear: both;
 }
 
-#about .col-md-7 {
-  padding-right: 2rem;
+/* Stacked about: profile on top, prose below.
+   No max-width here, so the intro spans the same measure as the
+   project descriptions (both are a plain Bootstrap container). */
+#about .about-body {
+  float: none;
 }
 
-#about .about-title-row {
-  margin-bottom: 0.25rem;
-}
-
-#about .about-text-heading {
-  text-align: center;
-  padding-right: 2rem;
-}
-
-#about .about-text-heading h1 {
-  margin: 0 0 0.75rem 0;
+#about #profile {
+  padding-top: 4px;
+  padding-bottom: 0;
 }
 
 #about #profile .portrait-title h2 {
-  font-size: 1.65em;
-  margin: 16px 0 8px 0;
+  font-size: 1.25rem;
+  margin: 14px 0 6px 0;
 }
 
 #about #profile .portrait-title h3 {
-  font-size: 0.95rem;
+  font-size: 0.8125rem;
+  margin-top: 0.35rem;
 }
 
 #about #profile .portrait {
-  width: 240px;
-  height: 240px;
+  width: 190px;
+  height: 190px;
   -webkit-background-size: cover;
   background-size: cover;
   background-position: center center;
@@ -429,92 +419,88 @@ a[data-fancybox] img {
 }
 
 #about #profile ul.network-icon {
-  margin-top: 20px;
+  margin-top: 12px;
+  margin-bottom: 0;
 }
 
 #about .big-icon {
-  font-size: 1.75rem;
+  font-size: 1.25rem;
 }
 
-@media screen and (max-width: 1200px) {
-  #about.home-section {
-    min-height: calc(100vh - 51px);
-    min-height: calc(100svh - 51px);
-  }
-}
 
-@media screen and (max-width: 991px) {
-  #about .col-md-7,
-  #about .about-text-heading {
-    padding-right: 15px;
-  }
-
-  .news-section-body {
-    padding-right: 15px;
-  }
-}
-
-.home-section:nth-of-type(even) {
+#about.home-section,
+#news.home-section {
   background-color: rgb(247, 247, 247);
 }
 
-#news.home-section {
-  padding-top: 32px;
-  padding-bottom: 32px;
+#projects.home-section {
+  background-color: rgb(255, 255, 255);
 }
 
 @media screen and (max-width: 768px) {
   .home-section {
-    padding: 60px 0 60px 0;
-  }
-  #news.home-section {
-    padding-top: 24px;
-    padding-bottom: 24px;
+    padding: 40px 0 40px 0;
   }
   .home-section:first-of-type {
     padding-top: 40px;
   }
 }
 
+/* Side-by-side Publications / News columns */
+.side-col-heading {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.side-col-heading h1 {
+  text-align: left;
+  font-size: 1.25rem;
+  margin: 0 0 8px 0;
+}
+
+@media screen and (min-width: 992px) {
+  .side-col + .side-col {
+    border-left: 1px solid rgba(0, 0, 0, 0.08);
+  }
+  .side-col + .side-col {
+    padding-left: 30px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .side-col + .side-col {
+    margin-top: 2.5rem;
+  }
+}
+
 .section-heading h1 {
   margin: 0 0 10px 0;
+  font-size: 1.375rem;
 }
 
 /* Unified body text across home page sections */
-#about .col-md-7 p,
-.news-list,
+#about .about-body p,
 #projects .text-container p,
 .pub-list-item {
-  font-size: 0.9375rem;
+  font-size: 0.875rem;
   line-height: 1.6;
 }
 
-#about .col-md-7 p {
+#about .about-body p {
   margin-bottom: 1rem;
 }
 
-/* News section: title on top, compact list */
-.news-section-heading {
-  text-align: center;
-  margin-bottom: 0.75rem;
-}
-
-.news-section-heading h1 {
-  margin: 0 0 0.5rem 0;
-}
-
-.news-section-body {
-  padding-left: 0;
-  padding-right: 2rem;
-}
-
+/* Compact news list in its side column */
 .news-list {
   margin-bottom: 0;
+  padding-left: 1.1rem;
+  font-size: 0.8125rem;
+  line-height: 1.55;
 }
 
 .news-list li {
-  margin-bottom: 0.45rem;
-  line-height: 1.5;
+  margin-bottom: 0.5rem;
+  line-height: 1.55;
 }
 
 .news-list li:last-child {
@@ -604,10 +590,18 @@ a[data-fancybox] img {
  **************************************************/
 
 .project-image {
-  max-width: 100%;
+  max-width: 810px;
+  width: 100%;
   height: auto;
+  margin: 0 auto;
   -o-object-fit: contain;
   object-fit: contain;
+}
+
+/* The WBE gif is a 16:9 illustration, so it needs less width than the
+   wide metaWEPP schematic to read at the same scale. */
+.project-image-gif {
+  max-width: 744px;
 }
 
 #profile {
@@ -1274,7 +1268,7 @@ footer a#back_to_top i {
  **************************************************/
 
 .navbar {
-  min-height: 70px !important;
+  min-height: 46px !important;
 }
 
 .navbar-default {
@@ -1326,9 +1320,9 @@ nav#navbar-main li {
 .navbar-brand,
 .navbar-nav li a {
   height: inherit;
-  line-height: 50px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  line-height: 32px;
+  padding-top: 7px;
+  padding-bottom: 7px;
 }
 
 .navbar-brand img {
