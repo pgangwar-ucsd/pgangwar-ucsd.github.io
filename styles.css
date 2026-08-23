@@ -383,11 +383,13 @@ a[data-fancybox] img {
   clear: both;
 }
 
-/* Stacked about: profile on top, prose below.
-   No max-width here, so the intro spans the same measure as the
-   project descriptions (both are a plain Bootstrap container). */
+/* Stacked about: profile on top, prose below. The intro keeps Bootstrap's
+   column float so its box clears the floated profile column above it —
+   with float:none the paragraph box overlaps the profile and swallows
+   clicks on the portrait links. No max-width, so the intro spans the same
+   measure as the project descriptions. */
 #about .about-body {
-  float: none;
+  clear: both;
 }
 
 #about #profile {
